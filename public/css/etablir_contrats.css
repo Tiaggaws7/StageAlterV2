@@ -1,12 +1,13 @@
-html {
-    background-color: rgb(255, 230, 200);
-}
 
 #header {
     display : flex;
     justify-content: space-around;
     background-color: beige;
     font-size: 2em;
+}
+
+html {
+    background-color: rgb(255, 230, 200);
 }
 
 #header > div {
@@ -27,7 +28,6 @@ h1 {
 
 #container_button {
     width: 50%;
-    margin : 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;

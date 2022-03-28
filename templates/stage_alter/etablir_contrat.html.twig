@@ -1,4 +1,31 @@
+{% extends 'base.html.twig' %}
 
-{% block header %}{% endblock %}
+{% block stylesheets %} <link href="{{ asset('css/etablir_contrats.css') }}" type="text/css" rel="stylesheet"> {% endblock %}
 
-<h1>ceci est un pleutre</h1>
+{% block body %}
+
+<h1>Etablir les contrats</h1>
+
+<div id="body">
+
+     <div id="container_button" >
+        
+            <button>Télécharger le contrat</button> 
+            <br/>
+            <button>Créer le contrat<button> 
+            <br/>
+            <button>Modifier le contrat</button> 
+            <br/>
+            <button>Supprimer le contrat</button>
+
+        </div>
+
+    <ul>
+        {% for i in 1..10 %}
+            <li>etudiant {{i}}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+{% endblock %}

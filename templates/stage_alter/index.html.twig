@@ -2,13 +2,14 @@
 
 {% block title %}StageAlter!{% endblock %}
 
-{% block stylesheets %} <style>{% include 'css/home.css' %}</style> {% endblock %}
+{% block stylesheets %} <link href="{{ asset('css/home.css') }}" type="text/css" rel="stylesheet"> {% endblock %}
 
 {% block body %}
+
     <h1>Bienvenue sur StageAlter</h1>
 
-    <div id="container_button" >
     
+
     <button>Gérer ses rendez-vous</button> 
     <br/>
     <button>Exportation PStage</button> 
@@ -18,8 +19,6 @@
     <button>Remplir fiche initiale</button> 
     <br/>
     <button>Remplir fiche suivie</button>
-    
-    </div>
 
 
 {% endblock %}

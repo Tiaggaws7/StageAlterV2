@@ -14,4 +14,11 @@ class StageAlterController extends AbstractController
             'controller_name' => 'StageAlterController',
         ]);
     }
+
+    public function etablir_contrat(): Response
+    {
+        return $this->render('stage_alter/etablir_contrat.html.twig', [
+            'controller_name' => 'StageAlterController',
+        ]);
+    }
 }

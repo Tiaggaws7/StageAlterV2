@@ -4,21 +4,35 @@
 
 {% block stylesheets %} <link href="{{ asset('css/home.css') }}" type="text/css" rel="stylesheet"> {% endblock %}
 
+{% block javascripts %} <script src="{{ asset('js/functions.js') }}"></script> {% endblock %}
+
+{% block header %}{% endblock %}
+
 {% block body %}
 
     <h1>Bienvenue sur StageAlter</h1>
 
+    <div id="body">
+
+        <div id="container_button" >
+        
+            <button>Gérer ses rendez-vous</button> 
+            <br/>
+            <button>Exportation PStage</button> 
+            <br/>
+            <button onClick="switch_page('/etablir_contrat')" >Etablir contrat</button> 
+            <br/>
+            <button onClick="test('dans la console')" >Remplir fiche initiale</button> 
+            <br/>
+            <button>Remplir fiche suivie</button>
+
+        </div>
+    
+    </div>
+
     
 
-    <button>Gérer ses rendez-vous</button> 
-    <br/>
-    <button>Exportation PStage</button> 
-    <br/>
-    <button>Etablir contrat</button> 
-    <br/>
-    <button>Remplir fiche initiale</button> 
-    <br/>
-    <button>Remplir fiche suivie</button>
+
 
 
 {% endblock %}

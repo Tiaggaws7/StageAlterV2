@@ -6,13 +6,27 @@
         {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
         {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
+            <link href="{{ asset('css/styles.css') }}" type="text/css" rel="stylesheet">
         {% endblock %}
 
         {% block javascripts %}
             {#{{ encore_entry_script_tags('app') }}#}
         {% endblock %}
     </head>
+    <header>
+    {% block header %}
+        
+        <div id="header" >
+            <div>
+                <img src="{{ asset('images/logo_StageAlter.png') }}" />
+                <p>StageAlter</p>
+            </div>
+            <p> Buil Tiago ▼ </p>
+        </div>
+
+    {% endblock %}
+
+    </header>
     <body>
         {% block body %}{% endblock %}
     </body>

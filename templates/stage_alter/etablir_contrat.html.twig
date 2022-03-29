@@ -23,12 +23,8 @@
 
     <p> Liste des étudiants  </p>
     <ul>
-        {% for i in 1..10 %}
-            {% if i == 3 %}
-                <li id="selected" >Etudiant {{i}}</li>
-            {% else %}
-                <li>Etudiant {{i}}</li>
-            {% endif %}
+        {% for Etudiant in Etudiants %}
+            <li>{{Etudiant.nom}}</li>
         {% endfor %}
     </ul>
 </div>

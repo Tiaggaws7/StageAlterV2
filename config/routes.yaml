@@ -2,6 +2,6 @@ home:
    path: /
    controller: App\Controller\StageAlterController::index
 
-etablir_contrat:
-   path: /etablir_contrat
-   controller: App\Controller\StageAlterController::etablir_contrat
+etablir_contrats:
+   path: /etablir_contrats
+   controller: App\Controller\StageAlterController::etablir_contrats

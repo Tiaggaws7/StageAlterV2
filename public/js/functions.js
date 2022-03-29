@@ -14,3 +14,19 @@ function choisirEtudiant(numero){
     etudiantChoisit = etudiant.textContent;
     document.getElementById("etablir_contrats").innerHTML = "Contrat de " + etudiantChoisit;
 }
+
+function telechargerContrat() {
+
+}
+
+function creerContrat() {
+    alert("Vous n'avez pas les droits pour créer ce fichier");
+}
+
+function modifierContrat() {
+    alert("Vous n'avez pas les droits pour modifier ce fichier");
+}
+
+function supprimerContrat() {
+    alert("Vous n'avez pas les droits pour supprimer ce fichier");
+}

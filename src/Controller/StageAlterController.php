@@ -17,11 +17,11 @@ class StageAlterController extends AbstractController
         return $this->render('stage_alter/index.html.twig', []);
     }
 
-    public function etablir_contrat(EtudiantsRepository $etudiantsRepository): Response
+    public function etablir_contrats(EtudiantsRepository $etudiantsRepository): Response
     {
         $etudiants = $etudiantsRepository->findAll();
 
-        return $this->render('stage_alter/etablir_contrat.html.twig', [
+        return $this->render('stage_alter/etablir_contrats.html.twig', [
             'etudiants' => $etudiants,
         ]);
     }

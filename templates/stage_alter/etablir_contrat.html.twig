@@ -2,6 +2,8 @@
 
 {% block stylesheets %} <link href="{{ asset('css/etablir_contrats.css') }}" type="text/css" rel="stylesheet"> {% endblock %}
 
+{% block javascripts %} <script src="{{ asset('js/functions.js') }}"></script> {% endblock %}
+
 {% block body %}
 
 <h1>Etablir les contrats</h1>
@@ -20,13 +22,17 @@
 
     </div>
 
-
-    <p> Liste des étudiants  </p>
-    <ul>
-        {% for etudiant in etudiants %}
-            <li>{{etudiant.nom}} {{etudiant.prenom}}</li>
-        {% endfor %}
-    </ul>
+    <div id="liste_etudiants">
+        <p> Liste des étudiants  </p>
+        <ul>
+            {% for etudiant in etudiants %}
+                <li onClick="choisirEtudiant({{etudiant.numeroEtudiant}})" id="{{etudiant.numeroEtudiant}}" >
+                {{etudiant.nom}} {{etudiant.prenom}}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    
 </div>
 
 

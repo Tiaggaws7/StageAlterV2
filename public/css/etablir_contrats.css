@@ -22,6 +22,11 @@ html {
     width : 75px;
 }
 
+#login {
+    font-size: 1.2em;
+    align-self: center;
+}
+
 h1 {
     text-align: center;
 }
@@ -32,7 +37,6 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color:blueviolet;
 }
 
 button {
@@ -48,15 +52,24 @@ p {
     font-size: 1.8em;
 }
 
+#liste_etudiants {
+    margin-left: 10%;
+}
+
  ul {
+     padding: 0px;
      border: black 2px solid;
      align-items: center;
      width: 10%;
+     height: 300px;
      font-size: 1.5em;
+     overflow:auto;
  }
 
  li {
-     list-style: square;
+     text-align: center;
+     list-style: none;
+     border : black 1px solid;
  }
 
  #selected {

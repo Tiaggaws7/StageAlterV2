@@ -12,7 +12,7 @@
         
         <button>Télécharger le contrat</button> 
         <br/>
-        <button>Créer le contrat<button> 
+        <button>Créer le contrat</button> 
         <br/>
         <button>Modifier le contrat</button> 
         <br/>
@@ -23,8 +23,8 @@
 
     <p> Liste des étudiants  </p>
     <ul>
-        {% for Etudiant in Etudiants %}
-            <li>{{Etudiant.nom}}</li>
+        {% for etudiant in etudiants %}
+            <li>{{etudiant.nom}} {{etudiant.prenom}}</li>
         {% endfor %}
     </ul>
 </div>

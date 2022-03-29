@@ -6,19 +6,23 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+use App\Repository\EtudiantsRepository;
+
 class StageAlterController extends AbstractController
 {
     public function index(): Response
     {
-        return $this->render('stage_alter/index.html.twig', [
-            'controller_name' => 'StageAlterController',
-        ]);
+
+        
+        return $this->render('stage_alter/index.html.twig', []);
     }
 
-    public function etablir_contrat(): Response
+    public function etablir_contrat(EtudiantsRepository $etudiantsRepository): Response
     {
+        $etudiants = $etudiantsRepository->findAll();
+
         return $this->render('stage_alter/etablir_contrat.html.twig', [
-            'controller_name' => 'StageAlterController',
+            'etudiants' => $etudiants,
         ]);
     }
 }

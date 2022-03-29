@@ -8,21 +8,27 @@
 
 <div id="body">
 
-     <div id="container_button" >
+    <div id="container_button" >
         
-            <button>Télécharger le contrat</button> 
-            <br/>
-            <button>Créer le contrat<button> 
-            <br/>
-            <button>Modifier le contrat</button> 
-            <br/>
-            <button>Supprimer le contrat</button>
+        <button>Télécharger le contrat</button> 
+        <br/>
+        <button>Créer le contrat<button> 
+        <br/>
+        <button>Modifier le contrat</button> 
+        <br/>
+        <button>Supprimer le contrat</button>
 
-        </div>
+    </div>
 
+
+    <p> Liste des étudiants  </p>
     <ul>
         {% for i in 1..10 %}
-            <li>etudiant {{i}}</li>
+            {% if i == 3 %}
+                <li id="selected" >Etudiant {{i}}</li>
+            {% else %}
+                <li>Etudiant {{i}}</li>
+            {% endif %}
         {% endfor %}
     </ul>
 </div>

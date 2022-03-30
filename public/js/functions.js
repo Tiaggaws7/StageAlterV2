@@ -20,7 +20,7 @@ function telechargerContrat() {
 }
 
 function creerContrat() {
-    alert("Vous n'avez pas les droits pour créer ce fichier");
+
 }
 
 function modifierContrat() {

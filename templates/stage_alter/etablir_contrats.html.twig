@@ -14,7 +14,9 @@
         
         <button onClick="telechargerContrat()">Télécharger le contrat</button> 
         <br/>
-        <button onClick="creerContrat()">Créer le contrat</button> 
+        <form action="{{ asset('php/creer_contrat.css') }}" method="POST">
+            <button type="submit">Créer le contrat</button> 
+        </form>
         <br/>
         <button onClick="modifierContrat()"  >Modifier le contrat</button> 
         <br/>

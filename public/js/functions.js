@@ -20,7 +20,18 @@ function telechargerContrat() {
 }
 
 function creerContrat() {
+    div = document.getElementById("liste_etudiants");
 
+    ul = div.children[1];
+
+    for ( i = 0; i < ul.children.length; i++){
+        if (ul.children[i].style.backgroundColor == 'lightgrey'){
+            sansEspace = ul.children[i].textContent.replace(/ /g, "");
+            document.location.href ="https://127.0.0.1:8000/php/creer_contrat.php?nomPrenom=" + sansEspace ;
+        }
+    }
+
+    //document.location.href = "https://127.0.0.1:8000/php/creer_contrat.php";
 }
 
 function modifierContrat() {

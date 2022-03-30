@@ -15,11 +15,7 @@ function choisirEtudiant(numero){
     document.getElementById("etablir_contrats").innerHTML = "Contrat de " + etudiantChoisit;
 }
 
-function telechargerContrat() {
-
-}
-
-function creerContrat() {
+function renvoyerVersPhp(string) {
     div = document.getElementById("liste_etudiants");
 
     ul = div.children[1];
@@ -27,17 +23,25 @@ function creerContrat() {
     for ( i = 0; i < ul.children.length; i++){
         if (ul.children[i].style.backgroundColor == 'lightgrey'){
             sansEspace = ul.children[i].textContent.replace(/ /g, "");
-            document.location.href ="https://127.0.0.1:8000/php/creer_contrat.php?nomPrenom=" + sansEspace ;
+            document.location.href = string + sansEspace ;
         }
     }
+}
 
-    //document.location.href = "https://127.0.0.1:8000/php/creer_contrat.php";
+function telechargerContrat() {
+    renvoyerVersPhp("https://127.0.0.1:8000/php/telecharger_contrat.php?nomPrenom=");
+}
+
+function creerContrat() {
+    renvoyerVersPhp("https://127.0.0.1:8000/php/creer_contrat.php?nomPrenom=");
 }
 
 function modifierContrat() {
     alert("Vous n'avez pas les droits pour modifier ce fichier");
 }
 
+r
+
 function supprimerContrat() {
-    alert("Vous n'avez pas les droits pour supprimer ce fichier");
+    renvoyerVersPhp("https://127.0.0.1:8000/php/supprimer_contrat.php?nomPrenom=");
 }

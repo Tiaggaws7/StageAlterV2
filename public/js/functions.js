@@ -1,9 +1,13 @@
+
+// Permet de changer de page
 function switch_page(nom_page){
     document.location.href = nom_page;
 }
 
+// Permet de savoir quel étudiant est selectionné
 let etudiantChoisit = "";
 
+// Permet de sélectionner un étudiant
 function choisirEtudiant(numero){
     etudiant = document.getElementById(numero);
     parent = etudiant.parentNode;
@@ -15,6 +19,7 @@ function choisirEtudiant(numero){
     document.getElementById("etablir_contrats").innerHTML = "Contrat de " + etudiantChoisit;
 }
 
+// Fonction utilisé afin d'envoyer le nom de l'étudiant selectionné en paramètre à une fonction php 
 function renvoyerVersPhp(string) {
     div = document.getElementById("liste_etudiants");
 
@@ -28,19 +33,20 @@ function renvoyerVersPhp(string) {
     }
 }
 
+// Permet de télécharger la fiche d'information 
 function telechargerContrat() {
     renvoyerVersPhp("https://127.0.0.1:8000/php/telecharger_contrat.php?nomPrenom=");
 }
 
+// Permet de créer la fiche d'information 
 function creerContrat() {
     renvoyerVersPhp("https://127.0.0.1:8000/php/creer_contrat.php?nomPrenom=");
 }
 
+// Permet de modifier la fiche d'information 
 function modifierContrat() {
     alert("Vous n'avez pas les droits pour modifier ce fichier");
 }
-
-r
 
 function supprimerContrat() {
     renvoyerVersPhp("https://127.0.0.1:8000/php/supprimer_contrat.php?nomPrenom=");

@@ -42,6 +42,11 @@ class Contrat
      */
     private $dangerOuRisques;
 
+    /**
+     * @ORM\Column(type="string", length=500)
+     */
+    private $mission;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -103,6 +108,18 @@ class Contrat
     public function setDangerOuRisques(bool $dangerOuRisques): self
     {
         $this->dangerOuRisques = $dangerOuRisques;
+
+        return $this;
+    }
+
+    public function getMission(): ?string
+    {
+        return $this->mission;
+    }
+
+    public function setMission(string $mission): self
+    {
+        $this->mission = $mission;
 
         return $this;
     }

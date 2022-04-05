@@ -40,7 +40,8 @@ function telechargerContrat() {
 
 // Permet de créer la fiche d'information 
 function creerContrat() {
-    renvoyerVersPhp("https://127.0.0.1:8000/php/creer_contrat.php?nomPrenom=");
+    //renvoyerVersPhp("https://127.0.0.1:8000/php/creer_contrat.php?nomPrenom=");
+    document.location.href = "https://127.0.0.1:8000/creer_contrat";
 }
 
 // Permet de modifier la fiche d'information 

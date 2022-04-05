@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %} <link href="{{ asset('css/creer_contrat.css') }}" type="text/css" rel="stylesheet"> {% endblock %}
+
+{% block body %}
+
+    <h1> Créer un étudiant</h1>
+
+    <form action="{{ asset('php/ajout_etudiant.php') }}" method="POST">
+
+        <label> Numéro étudiant  </label>
+        <input name="numEtudiant" /><br/><br/>
+
+        <label> Nom  </label>
+        <input name="nom" /><br/><br/>
+
+        <label> Prenom </label>
+        <input name="prenom" /><br/><br/>
+
+        <label> Date de naissance </label>
+        <input name="dateNaiss" /><br/><br/>
+
+        <label> Régime d'inscription </label>
+        <input name="regimeInscription" /><br/><br/>
+
+        <label> Adresse  </label>
+        <input name="adresse" /><br/><br/>
+
+        <label> Code postal  </label>
+        <input name="code_postal" /><br/><br/>
+
+        <label> Ville </label>
+        <input name="ville" /><br/><br/>
+
+        <label> Téléphone  </label>
+        <input name="telephone" /><br/><br/>
+
+        <label> Email  </label>
+        <input name="email" /><br/><br/>
+
+        <label> Nationalilé  </label>
+        <input name="nationalite" /><br/><br/>
+
+        <label> Lieu de naissance  </label>
+        <input name="lieuNaiss" /><br/><br/>
+
+        <label> Numéro de département de naissance  </label>
+        <input name="numDepartementNaiss" /><br/><br/>
+
+        <label> Numéro de sécurité sociale  </label>
+        <input name="numSecu" /><br/><br/>
+
+        <label> Régime sociale  </label>
+        <input name="regimeSocial" /><br/><br/>
+
+        <label> Dernier diplôme  </label>
+        <input name="dernierDiplome" /><br/><br/>
+
+        <label> Handicape  </label>
+        <input name="handicape" /><br/><br/>
+
+        <label> Contrat d'apprentissage  </label>
+        <input name="contratApprentissage" /><br/><br/>
+    
+        <button value="submit" >Valider mes informations</button>
+    </form>
+
+{% endblock %}

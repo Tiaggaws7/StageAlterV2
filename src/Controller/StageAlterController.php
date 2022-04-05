@@ -25,4 +25,9 @@ class StageAlterController extends AbstractController
             'etudiants' => $etudiants,
         ]);
     }
+
+    public function creer_contrat(): Response
+    {
+        return $this->render('stage_alter/creer_contrat.html.twig', []);
+    }
 }

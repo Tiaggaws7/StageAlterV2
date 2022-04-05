@@ -24,7 +24,6 @@ class AppFixtures extends Fixture
 
 
 
-
         for ($i = 0; $i < count($prenoms); $i++){
             $fixturesEtudiants = new Etudiants();
 
@@ -62,7 +61,7 @@ class AppFixtures extends Fixture
 
             $fixturesEtudiants->setDernierDiplome($faker->email);
 
-            $fixturesEtudiants->setHandicape($faker->email);
+            $fixturesEtudiants->setHandicape($faker->boolean);
             
             $fixturesEtudiants->setContratApprentissage($faker->email);
 

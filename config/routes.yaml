@@ -5,3 +5,7 @@ home:
 etablir_contrats:
    path: /etablir_contrats
    controller: App\Controller\StageAlterController::etablir_contrats
+
+creer_contrat:
+   path: /creer_contrat
+   controller: App\Controller\StageAlterController::creer_contrat

@@ -1,4 +1,5 @@
 <?php
+    $id = uniqid((double)microtime()*1000000, true);
     $numEtudiant = $_POST["numEtudiant"];
     $nom = $_POST["nom"];
     $prenom = $_POST["prenom"];
@@ -44,7 +45,8 @@
     
     echo "Connexion réussie";
     
-    $sql = 'INSERT INTO etudiants VALUES (789, 123456, "jespere", "buil", "124578", "uio", "gui  gui", 64100, "bayoone", 064515465, "oihouh", "hgjh", "ugiuhg", 123456, 123456456, "gyu", "ffyu", true, "uigui");';
+    $sql = 'INSERT INTO etudiants VALUES (789654123, 756963, "BUIL", "Tiago", "30/07/2002", "formation continue", "rue des soeurs blanches", 64100, "Bayonne", 0699733669, "tiagobuil@yahoo.fr", "français", "La Teste-de-Buch", 33260, 123456789, "URSSAF", "BAC S", true, "aucun");';
+    //    $sql = 'INSERT INTO etudiants VALUES ($id, $numEtudiant, \"$nom\", \"$prenom\", \"$dateNaiss\", \"$regimeInscription\", \"$adresse\", $code_postal, \"$ville\", $telephone, \"$email\", \"$nationalite\", \"$lieuNaiss\", $numDepartementNaiss, $numSecu, \"$regimeSocial\", \"$dernierDiplome\", $handicape, \"$contratApprentissage\");';w
     if (mysqli_query($conn, $sql)) {
         echo "Nouveau enregistrement créé avec succès";
     } else {

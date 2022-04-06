@@ -8,8 +8,8 @@
 
     <h1> Créer un étudiant</h1>
 
-    <div id="formulaire">
-        <form action="ajout_etudiant.php" method="POST">
+    <form action="php/ajout_etudiant.php" method="POST">
+
         <label> Numéro étudiant  </label>
         <input name="numEtudiant" /><br/><br/>
 
@@ -64,7 +64,7 @@
         <label> Contrat d'apprentissage  </label>
         <input name="contratApprentissage" /><br/><br/>
     
-        <button onClick="creerContrat()" >Valider mes informations</button>
+        <button value="submit" >Valider mes informations</button>
+        
     </form>
-    </div>
 {% endblock %}

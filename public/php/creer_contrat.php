@@ -9,6 +9,6 @@ copy("../contrats/base/contrat_base.pdf","../contrats/" . $nomPrenom . "_contrat
 
 
 // Retour à la page etablir_contrat
-header('Location: https://127.0.0.1:8000/etablir_contrats');
+header('Location: https://127.0.0.1:8000/php/ajout_etudiant.php');
 
 ?>

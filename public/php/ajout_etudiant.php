@@ -19,7 +19,7 @@
     $contratApprentissage = $_POST["contratApprentissage"];
 
 
-    $etudiant = new Etudiants($numEtudiant, $nom, $prenom);
+    //$etudiant = new Etudiants($numEtudiant, $nom, $prenom);
 
     // $etudiant->setprenom($prenom);
 
@@ -29,7 +29,9 @@
 
     // $manager->flush();
 
-    $server = "http://lakartxela.iutbayonne.univ-pau.fr/phpmyadmin/";//Le serveur
+    
+
+    $server = "lakartxela.iutbayonne.univ-pau.fr";//Le serveur
     $username = "mweill_sym"; //Login
     $password = "mweill_sym"; //Mdp
     $database = "mweill_sym"; //Le nom de la base de données
@@ -42,7 +44,7 @@
     
     echo "Connexion réussie";
     
-    $sql = 'INSERT INTO etudiants VALUES (456, 123456, "gre", "buil", "124578", "uio", "gui  gui", 64100, "bayoone", 064515465, "oihouh", "hgjh", "ugiuhg", 123456, 123456456, "gyu", "ffyu", true, "uigui");';
+    $sql = 'INSERT INTO etudiants VALUES (789, 123456, "jespere", "buil", "124578", "uio", "gui  gui", 64100, "bayoone", 064515465, "oihouh", "hgjh", "ugiuhg", 123456, 123456456, "gyu", "ffyu", true, "uigui");';
     if (mysqli_query($conn, $sql)) {
         echo "Nouveau enregistrement créé avec succès";
     } else {

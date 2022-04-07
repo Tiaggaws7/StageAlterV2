@@ -2,23 +2,29 @@
 
     // Récupération des données contenue dans l'url
     $nomPrenom = $_GET['nomPrenom'];
-
-    $file_path = "../contrats/" . $nomPrenom . "_contrat.pdf";
-
-    // if (file_exists($file_path)) {
-    //     // Si la fiche d'information de l'étudiant existe, le télécharge
-    //     header('Content-Type: application/octet-stream');
-    //     header("Content-Transfer-Encoding: Binary"); 
-    //     header("Content-disposition: attachment; filename=\"" . basename($file_path) . "\""); 
-    //     readfile($file_path); 
-
-    // } else {
-    //     // Si le fichier n'existe pas, on retourne à la page etablir_contrat
-    //     header('Location: https://127.0.0.1:8000/etablir_contrats');
-    // }
     
-    // Suppprime le fichier  
-    unlink("../contrats/" . $nomPrenom . "_contrat.pdf");
+    
+    $server = "lakartxela.iutbayonne.univ-pau.fr";//Le serveur
+    $username = "mweill_sym"; //Login
+    $password = "mweill_sym"; //Mdp
+    $database = "mweill_sym"; //Le nom de la base de données
+    // Create connection
+    $conn = mysqli_connect($server, $username, $password, $database);
+    // Check connection
+    if (!$conn) {
+        die("Échec de la connexion : " . mysqli_connect_error());
+    }
+    
+    echo "Connexion réussie";
+    
+    $sql = 'DELETE from etudiants where etudiants.nom = "Buil"; ';
+    if (mysqli_query($conn, $sql)) {
+        echo "Nouveau enregistrement créé avec succès";
+    } else {
+        echo "Erreur : " . $sql . "<br>" . mysqli_error($conn);
+    }
+    mysqli_close($conn);
+
 
     // Retour à la page etablir_contrat
     header('Location: https://127.0.0.1:8000/etablir_contrats');
